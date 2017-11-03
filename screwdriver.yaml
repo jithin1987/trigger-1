@@ -1,6 +1,6 @@
 jobs:
   main:
-    image: busybox
+    image: node:6
     requires: [~pr, ~commit]
     steps:
       - echo: echo "in trigger-1"
