@@ -1,0 +1,6 @@
+jobs:
+  main:
+    image: busybox
+    requires: [~pr, ~commit]
+    steps:
+      - echo: echo "in trigger-1"
