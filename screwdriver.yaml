@@ -4,4 +4,4 @@ jobs:
     requires: [~pr, ~commit]
     steps:
       - echo: echo "in trigger-1"
-      - sleep 10000
+      - sleep 1
