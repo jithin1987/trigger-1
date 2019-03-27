@@ -3,5 +3,7 @@ jobs:
     template: tiff/template2
     requires: [~pr, ~commit]
     steps:
-      - postecho: echo "post step"
+      - postecho: |
+          sleep 30
+          hab install core/jq-static
       - teardown-sleep: sleep 30
