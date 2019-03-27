@@ -1,7 +1,7 @@
 jobs:
   main:
-    image: node:6
+    template: tiff/template2
     requires: [~pr, ~commit]
     steps:
-      - echo: echo "in trigger-1"
-      - sleep 1000
+      - postecho: echo "post step"
+      - teardown-sleep: sleep 1000
