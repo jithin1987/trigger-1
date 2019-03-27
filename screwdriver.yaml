@@ -4,4 +4,4 @@ jobs:
     requires: [~pr, ~commit]
     steps:
       - postecho: echo "post step"
-      - teardown-sleep: sleep 1000
+      - teardown-sleep: sleep 30
