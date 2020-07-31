@@ -1,8 +1,8 @@
 jobs:
   main:
-    template: tiff/template2
+    image: node:12
     requires: [~pr, ~commit]
     steps:
-      - postecho: |
+      - test: |
           echo $SD_TOKEN
           sleep 30
