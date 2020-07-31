@@ -4,6 +4,5 @@ jobs:
     requires: [~pr, ~commit]
     steps:
       - postecho: |
+          echo $SD_TOKEN
           sleep 30
-          hab install core/jq-static
-      #- teardown-sleep: sleep 30
