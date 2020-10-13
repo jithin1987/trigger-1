@@ -1,9 +1,6 @@
 jobs:
   main:
-    template: tiff/template2
+    image: node:12
     requires: [~pr, ~commit]
     steps:
-      - postecho: |
-          sleep 30
-          hab install core/jq-static
-      #- teardown-sleep: sleep 30
+      - echo: echo "hello"
