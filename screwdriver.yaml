@@ -4,4 +4,5 @@ jobs:
     requires: [~pr, ~commit]
     steps:
       - echo: echo "hello"
-      - committer: curl -H "Authorization: Bearer: $SD_TOKEN" $SD_API_URL/events/$SD_EVENT_ID" | jq '.creator.name'
+      - committer: |
+          curl -H "Authorization: Bearer $SD_TOKEN" $SD_API_URL/events/$SD_EVENT_ID" | jq '.creator.name'
