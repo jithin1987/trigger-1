@@ -5,5 +5,4 @@ jobs:
     steps:
       - echo: echo "hello"
       - committer: |
-          echo "curl -H Authorization: Bearer $SD_TOKEN $SD_API_URL/events/$SD_EVENT_ID"
-          curl -H "Authorization: Bearer $SD_TOKEN" $SD_API_URL/events/$SD_EVENT_ID | jq '.creator.name'
+          curl -H "Authorization: Bearer $SD_TOKEN" "$SD_API_URLevents/$SD_EVENT_ID" | jq '.creator.name'
